@@ -34,6 +34,8 @@ alter database open;
 
 archive log list; --retorna Archive Mode
 
+--alter system log_archive_dest_1 = 'location = /backup/pa6hom/archivelog'
+
 --tentar novamente
 alter database flashback on;
 
