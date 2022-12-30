@@ -1,0 +1,6 @@
+1. Analisar os parâmetros dos utilitários de dump (impdp e expdp)
+
+FLASHBACK_SCN
+
+FLASHBACK_TIME
+
