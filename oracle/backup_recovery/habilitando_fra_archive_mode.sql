@@ -1,6 +1,5 @@
 --consultando os parâmetros da FRA
-
-set line 150;
+set line 250;
 
 show parameter db_recovery_file_dest;
 
@@ -33,6 +32,8 @@ alter database archivelog;
 
 alter database open;
 
+archive log list; --retorna Archive Mode
+
 --tentar novamente
 alter database flashback on;
 
@@ -43,6 +44,6 @@ alter system set db_flashback_retention_target=1440 scope=both;
 
 select * from v$flashback_database_log; 
 
+select * from v$recovery_area_usage; --uso para cada tipo de arquivo
 
-
-
+select * from v$recovery_file_dest; --visão geral de uso
